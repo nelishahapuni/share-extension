@@ -8,12 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		409C5CB32AEE49A90047F02B /* ShareExtensionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409C5CB22AEE49A90047F02B /* ShareExtensionApp.swift */; };
-		409C5CB52AEE49A90047F02B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409C5CB42AEE49A90047F02B /* ContentView.swift */; };
+		409C5CB52AEE49A90047F02B /* ShareExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409C5CB42AEE49A90047F02B /* ShareExtension.swift */; };
 		409C5CB72AEE49B10047F02B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 409C5CB62AEE49B10047F02B /* Assets.xcassets */; };
 		409C5CBA2AEE49B10047F02B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 409C5CB92AEE49B10047F02B /* Preview Assets.xcassets */; };
 		409C5CC42AEE49B10047F02B /* ShareExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409C5CC32AEE49B10047F02B /* ShareExtensionTests.swift */; };
 		409C5CCE2AEE49B10047F02B /* ShareExtensionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409C5CCD2AEE49B10047F02B /* ShareExtensionUITests.swift */; };
 		409C5CD02AEE49B10047F02B /* ShareExtensionUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409C5CCF2AEE49B10047F02B /* ShareExtensionUITestsLaunchTests.swift */; };
+		409C5CDD2AEE5A630047F02B /* PhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409C5CDC2AEE5A630047F02B /* PhotoModel.swift */; };
+		409C5CDE2AEE5A630047F02B /* PhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409C5CDC2AEE5A630047F02B /* PhotoModel.swift */; };
+		409C5CDF2AEE5A630047F02B /* PhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409C5CDC2AEE5A630047F02B /* PhotoModel.swift */; };
+		409C5CE22AEE62110047F02B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409C5CE12AEE62110047F02B /* LoginView.swift */; };
+		409C5CE32AEE62110047F02B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409C5CE12AEE62110047F02B /* LoginView.swift */; };
+		409C5CE42AEE62110047F02B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409C5CE12AEE62110047F02B /* LoginView.swift */; };
+		409C5CE62AEE62690047F02B /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409C5CE52AEE62690047F02B /* LoginViewModel.swift */; };
+		409C5CE72AEE62690047F02B /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409C5CE52AEE62690047F02B /* LoginViewModel.swift */; };
+		409C5CE82AEE62690047F02B /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409C5CE52AEE62690047F02B /* LoginViewModel.swift */; };
+		409C5CEA2AEE62A10047F02B /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409C5CE92AEE62A10047F02B /* LoginModel.swift */; };
+		409C5CEB2AEE62A10047F02B /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409C5CE92AEE62A10047F02B /* LoginModel.swift */; };
+		409C5CEC2AEE62A10047F02B /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409C5CE92AEE62A10047F02B /* LoginModel.swift */; };
+		409C5CF72AEE74A50047F02B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409C5CF62AEE74A50047F02B /* HomeView.swift */; };
+		409C5CFC2AEE86D90047F02B /* PhotoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409C5CFB2AEE86D90047F02B /* PhotoPickerView.swift */; };
+		409C5CFD2AEE86D90047F02B /* PhotoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409C5CFB2AEE86D90047F02B /* PhotoPickerView.swift */; };
+		409C5CFE2AEE86D90047F02B /* PhotoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409C5CFB2AEE86D90047F02B /* PhotoPickerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +52,7 @@
 /* Begin PBXFileReference section */
 		409C5CAF2AEE49A90047F02B /* ShareExtension.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShareExtension.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		409C5CB22AEE49A90047F02B /* ShareExtensionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareExtensionApp.swift; sourceTree = "<group>"; };
-		409C5CB42AEE49A90047F02B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		409C5CB42AEE49A90047F02B /* ShareExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareExtension.swift; sourceTree = "<group>"; };
 		409C5CB62AEE49B10047F02B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		409C5CB92AEE49B10047F02B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		409C5CBF2AEE49B10047F02B /* ShareExtensionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShareExtensionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +60,12 @@
 		409C5CC92AEE49B10047F02B /* ShareExtensionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShareExtensionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		409C5CCD2AEE49B10047F02B /* ShareExtensionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareExtensionUITests.swift; sourceTree = "<group>"; };
 		409C5CCF2AEE49B10047F02B /* ShareExtensionUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareExtensionUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		409C5CDC2AEE5A630047F02B /* PhotoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoModel.swift; sourceTree = "<group>"; };
+		409C5CE12AEE62110047F02B /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		409C5CE52AEE62690047F02B /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		409C5CE92AEE62A10047F02B /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		409C5CF62AEE74A50047F02B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		409C5CFB2AEE86D90047F02B /* PhotoPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,9 +117,12 @@
 			isa = PBXGroup;
 			children = (
 				409C5CB22AEE49A90047F02B /* ShareExtensionApp.swift */,
-				409C5CB42AEE49A90047F02B /* ContentView.swift */,
+				409C5CB42AEE49A90047F02B /* ShareExtension.swift */,
 				409C5CB62AEE49B10047F02B /* Assets.xcassets */,
 				409C5CB82AEE49B10047F02B /* Preview Content */,
+				409C5CFA2AEE74B30047F02B /* Views */,
+				409C5CE02AEE5B5D0047F02B /* Models */,
+				409C5CF52AEE63B70047F02B /* ViewModels */,
 			);
 			path = ShareExtension;
 			sourceTree = "<group>";
@@ -125,6 +150,41 @@
 				409C5CCF2AEE49B10047F02B /* ShareExtensionUITestsLaunchTests.swift */,
 			);
 			path = ShareExtensionUITests;
+			sourceTree = "<group>";
+		};
+		409C5CE02AEE5B5D0047F02B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				409C5CDC2AEE5A630047F02B /* PhotoModel.swift */,
+				409C5CE92AEE62A10047F02B /* LoginModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		409C5CF52AEE63B70047F02B /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				409C5CE52AEE62690047F02B /* LoginViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		409C5CFA2AEE74B30047F02B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				409C5CE12AEE62110047F02B /* LoginView.swift */,
+				409C5CF62AEE74A50047F02B /* HomeView.swift */,
+				409C5D042AEEB2B10047F02B /* Components */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		409C5D042AEEB2B10047F02B /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				409C5CFB2AEE86D90047F02B /* PhotoPickerView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,7 +317,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				409C5CB52AEE49A90047F02B /* ContentView.swift in Sources */,
+				409C5CF72AEE74A50047F02B /* HomeView.swift in Sources */,
+				409C5CDD2AEE5A630047F02B /* PhotoModel.swift in Sources */,
+				409C5CB52AEE49A90047F02B /* ShareExtension.swift in Sources */,
+				409C5CFC2AEE86D90047F02B /* PhotoPickerView.swift in Sources */,
+				409C5CE22AEE62110047F02B /* LoginView.swift in Sources */,
+				409C5CEA2AEE62A10047F02B /* LoginModel.swift in Sources */,
+				409C5CE62AEE62690047F02B /* LoginViewModel.swift in Sources */,
 				409C5CB32AEE49A90047F02B /* ShareExtensionApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,6 +332,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				409C5CE72AEE62690047F02B /* LoginViewModel.swift in Sources */,
+				409C5CE32AEE62110047F02B /* LoginView.swift in Sources */,
+				409C5CDE2AEE5A630047F02B /* PhotoModel.swift in Sources */,
+				409C5CFD2AEE86D90047F02B /* PhotoPickerView.swift in Sources */,
+				409C5CEB2AEE62A10047F02B /* LoginModel.swift in Sources */,
 				409C5CC42AEE49B10047F02B /* ShareExtensionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,7 +345,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				409C5CDF2AEE5A630047F02B /* PhotoModel.swift in Sources */,
 				409C5CD02AEE49B10047F02B /* ShareExtensionUITestsLaunchTests.swift in Sources */,
+				409C5CE42AEE62110047F02B /* LoginView.swift in Sources */,
+				409C5CEC2AEE62A10047F02B /* LoginModel.swift in Sources */,
+				409C5CFE2AEE86D90047F02B /* PhotoPickerView.swift in Sources */,
+				409C5CE82AEE62690047F02B /* LoginViewModel.swift in Sources */,
 				409C5CCE2AEE49B10047F02B /* ShareExtensionUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
