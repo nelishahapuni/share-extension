@@ -25,6 +25,8 @@ class LoginViewModel: ObservableObject {
 
 extension LoginViewModel {
 
+    /// Validate whether the user credentials - username & password - are valid. Then generate an access token (UUID) and pass success (true) or error (false) through the completion closure.
+    /// - Parameter completion: an escaping closure that returns true or false.
     func validate(completion: @escaping (Bool) -> Void) {
         // TODO: - Validate parameters before calling completion
         // TODO: - Save login info in user defaults

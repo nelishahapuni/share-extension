@@ -70,6 +70,7 @@
 				409C5CE02AEE5B5D0047F02B /* Models */,
 				409C5CFA2AEE74B30047F02B /* Views */,
 				409C5CF52AEE63B70047F02B /* ViewModels */,
+				409C5D042AEEB2B10047F02B /* Components */,
 			);
 			path = ShareExtension;
 			sourceTree = "<group>";
@@ -104,7 +105,6 @@
 			children = (
 				409C5CF62AEE74A50047F02B /* HomeView.swift */,
 				409C5CE12AEE62110047F02B /* LoginView.swift */,
-				409C5D042AEEB2B10047F02B /* Components */,
 			);
 			path = Views;
 			sourceTree = "<group>";
