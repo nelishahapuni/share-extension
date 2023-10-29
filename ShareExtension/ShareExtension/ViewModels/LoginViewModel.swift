@@ -26,7 +26,8 @@ class LoginViewModel: ObservableObject {
 extension LoginViewModel {
 
     func validate(completion: @escaping (Bool) -> Void) {
-        // TODO: - Validate parameters before calling completion &
+        // TODO: - Validate parameters before calling completion
+        // TODO: - Save login info in user defaults
         completion(true)
     }
 }

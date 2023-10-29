@@ -11,43 +11,13 @@
 		409C5CB52AEE49A90047F02B /* ShareExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409C5CB42AEE49A90047F02B /* ShareExtension.swift */; };
 		409C5CB72AEE49B10047F02B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 409C5CB62AEE49B10047F02B /* Assets.xcassets */; };
 		409C5CBA2AEE49B10047F02B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 409C5CB92AEE49B10047F02B /* Preview Assets.xcassets */; };
-		409C5CC42AEE49B10047F02B /* ShareExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409C5CC32AEE49B10047F02B /* ShareExtensionTests.swift */; };
-		409C5CCE2AEE49B10047F02B /* ShareExtensionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409C5CCD2AEE49B10047F02B /* ShareExtensionUITests.swift */; };
-		409C5CD02AEE49B10047F02B /* ShareExtensionUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409C5CCF2AEE49B10047F02B /* ShareExtensionUITestsLaunchTests.swift */; };
 		409C5CDD2AEE5A630047F02B /* PhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409C5CDC2AEE5A630047F02B /* PhotoModel.swift */; };
-		409C5CDE2AEE5A630047F02B /* PhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409C5CDC2AEE5A630047F02B /* PhotoModel.swift */; };
-		409C5CDF2AEE5A630047F02B /* PhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409C5CDC2AEE5A630047F02B /* PhotoModel.swift */; };
 		409C5CE22AEE62110047F02B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409C5CE12AEE62110047F02B /* LoginView.swift */; };
-		409C5CE32AEE62110047F02B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409C5CE12AEE62110047F02B /* LoginView.swift */; };
-		409C5CE42AEE62110047F02B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409C5CE12AEE62110047F02B /* LoginView.swift */; };
 		409C5CE62AEE62690047F02B /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409C5CE52AEE62690047F02B /* LoginViewModel.swift */; };
-		409C5CE72AEE62690047F02B /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409C5CE52AEE62690047F02B /* LoginViewModel.swift */; };
-		409C5CE82AEE62690047F02B /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409C5CE52AEE62690047F02B /* LoginViewModel.swift */; };
 		409C5CEA2AEE62A10047F02B /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409C5CE92AEE62A10047F02B /* LoginModel.swift */; };
-		409C5CEB2AEE62A10047F02B /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409C5CE92AEE62A10047F02B /* LoginModel.swift */; };
-		409C5CEC2AEE62A10047F02B /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409C5CE92AEE62A10047F02B /* LoginModel.swift */; };
 		409C5CF72AEE74A50047F02B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409C5CF62AEE74A50047F02B /* HomeView.swift */; };
 		409C5CFC2AEE86D90047F02B /* PhotoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409C5CFB2AEE86D90047F02B /* PhotoPickerView.swift */; };
-		409C5CFD2AEE86D90047F02B /* PhotoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409C5CFB2AEE86D90047F02B /* PhotoPickerView.swift */; };
-		409C5CFE2AEE86D90047F02B /* PhotoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409C5CFB2AEE86D90047F02B /* PhotoPickerView.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		409C5CC02AEE49B10047F02B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 409C5CA72AEE49A90047F02B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 409C5CAE2AEE49A90047F02B;
-			remoteInfo = ShareExtension;
-		};
-		409C5CCA2AEE49B10047F02B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 409C5CA72AEE49A90047F02B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 409C5CAE2AEE49A90047F02B;
-			remoteInfo = ShareExtension;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		409C5CAF2AEE49A90047F02B /* ShareExtension.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShareExtension.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -55,11 +25,6 @@
 		409C5CB42AEE49A90047F02B /* ShareExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareExtension.swift; sourceTree = "<group>"; };
 		409C5CB62AEE49B10047F02B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		409C5CB92AEE49B10047F02B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		409C5CBF2AEE49B10047F02B /* ShareExtensionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShareExtensionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		409C5CC32AEE49B10047F02B /* ShareExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareExtensionTests.swift; sourceTree = "<group>"; };
-		409C5CC92AEE49B10047F02B /* ShareExtensionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShareExtensionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		409C5CCD2AEE49B10047F02B /* ShareExtensionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareExtensionUITests.swift; sourceTree = "<group>"; };
-		409C5CCF2AEE49B10047F02B /* ShareExtensionUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareExtensionUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		409C5CDC2AEE5A630047F02B /* PhotoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoModel.swift; sourceTree = "<group>"; };
 		409C5CE12AEE62110047F02B /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		409C5CE52AEE62690047F02B /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -76,20 +41,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		409C5CBC2AEE49B10047F02B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		409C5CC62AEE49B10047F02B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -97,8 +48,6 @@
 			isa = PBXGroup;
 			children = (
 				409C5CB12AEE49A90047F02B /* ShareExtension */,
-				409C5CC22AEE49B10047F02B /* ShareExtensionTests */,
-				409C5CCC2AEE49B10047F02B /* ShareExtensionUITests */,
 				409C5CB02AEE49A90047F02B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -107,8 +56,6 @@
 			isa = PBXGroup;
 			children = (
 				409C5CAF2AEE49A90047F02B /* ShareExtension.app */,
-				409C5CBF2AEE49B10047F02B /* ShareExtensionTests.xctest */,
-				409C5CC92AEE49B10047F02B /* ShareExtensionUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -133,23 +80,6 @@
 				409C5CB92AEE49B10047F02B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		409C5CC22AEE49B10047F02B /* ShareExtensionTests */ = {
-			isa = PBXGroup;
-			children = (
-				409C5CC32AEE49B10047F02B /* ShareExtensionTests.swift */,
-			);
-			path = ShareExtensionTests;
-			sourceTree = "<group>";
-		};
-		409C5CCC2AEE49B10047F02B /* ShareExtensionUITests */ = {
-			isa = PBXGroup;
-			children = (
-				409C5CCD2AEE49B10047F02B /* ShareExtensionUITests.swift */,
-				409C5CCF2AEE49B10047F02B /* ShareExtensionUITestsLaunchTests.swift */,
-			);
-			path = ShareExtensionUITests;
 			sourceTree = "<group>";
 		};
 		409C5CE02AEE5B5D0047F02B /* Models */ = {
@@ -205,6 +135,7 @@
 				409C5CAB2AEE49A90047F02B /* Sources */,
 				409C5CAC2AEE49A90047F02B /* Frameworks */,
 				409C5CAD2AEE49A90047F02B /* Resources */,
+				409C5D062AEEBCA70047F02B /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -214,42 +145,6 @@
 			productName = ShareExtension;
 			productReference = 409C5CAF2AEE49A90047F02B /* ShareExtension.app */;
 			productType = "com.apple.product-type.application";
-		};
-		409C5CBE2AEE49B10047F02B /* ShareExtensionTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 409C5CD62AEE49B10047F02B /* Build configuration list for PBXNativeTarget "ShareExtensionTests" */;
-			buildPhases = (
-				409C5CBB2AEE49B10047F02B /* Sources */,
-				409C5CBC2AEE49B10047F02B /* Frameworks */,
-				409C5CBD2AEE49B10047F02B /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				409C5CC12AEE49B10047F02B /* PBXTargetDependency */,
-			);
-			name = ShareExtensionTests;
-			productName = ShareExtensionTests;
-			productReference = 409C5CBF2AEE49B10047F02B /* ShareExtensionTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		409C5CC82AEE49B10047F02B /* ShareExtensionUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 409C5CD92AEE49B10047F02B /* Build configuration list for PBXNativeTarget "ShareExtensionUITests" */;
-			buildPhases = (
-				409C5CC52AEE49B10047F02B /* Sources */,
-				409C5CC62AEE49B10047F02B /* Frameworks */,
-				409C5CC72AEE49B10047F02B /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				409C5CCB2AEE49B10047F02B /* PBXTargetDependency */,
-			);
-			name = ShareExtensionUITests;
-			productName = ShareExtensionUITests;
-			productReference = 409C5CC92AEE49B10047F02B /* ShareExtensionUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -263,14 +158,6 @@
 				TargetAttributes = {
 					409C5CAE2AEE49A90047F02B = {
 						CreatedOnToolsVersion = 15.0.1;
-					};
-					409C5CBE2AEE49B10047F02B = {
-						CreatedOnToolsVersion = 15.0.1;
-						TestTargetID = 409C5CAE2AEE49A90047F02B;
-					};
-					409C5CC82AEE49B10047F02B = {
-						CreatedOnToolsVersion = 15.0.1;
-						TestTargetID = 409C5CAE2AEE49A90047F02B;
 					};
 				};
 			};
@@ -288,8 +175,6 @@
 			projectRoot = "";
 			targets = (
 				409C5CAE2AEE49A90047F02B /* ShareExtension */,
-				409C5CBE2AEE49B10047F02B /* ShareExtensionTests */,
-				409C5CC82AEE49B10047F02B /* ShareExtensionUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -304,21 +189,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		409C5CBD2AEE49B10047F02B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		409C5CC72AEE49B10047F02B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		409C5D062AEEBCA70047F02B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		409C5CAB2AEE49A90047F02B /* Sources */ = {
@@ -336,47 +227,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		409C5CBB2AEE49B10047F02B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				409C5CE72AEE62690047F02B /* LoginViewModel.swift in Sources */,
-				409C5CE32AEE62110047F02B /* LoginView.swift in Sources */,
-				409C5CDE2AEE5A630047F02B /* PhotoModel.swift in Sources */,
-				409C5CFD2AEE86D90047F02B /* PhotoPickerView.swift in Sources */,
-				409C5CEB2AEE62A10047F02B /* LoginModel.swift in Sources */,
-				409C5CC42AEE49B10047F02B /* ShareExtensionTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		409C5CC52AEE49B10047F02B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				409C5CDF2AEE5A630047F02B /* PhotoModel.swift in Sources */,
-				409C5CD02AEE49B10047F02B /* ShareExtensionUITestsLaunchTests.swift in Sources */,
-				409C5CE42AEE62110047F02B /* LoginView.swift in Sources */,
-				409C5CEC2AEE62A10047F02B /* LoginModel.swift in Sources */,
-				409C5CFE2AEE86D90047F02B /* PhotoPickerView.swift in Sources */,
-				409C5CE82AEE62690047F02B /* LoginViewModel.swift in Sources */,
-				409C5CCE2AEE49B10047F02B /* ShareExtensionUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		409C5CC12AEE49B10047F02B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 409C5CAE2AEE49A90047F02B /* ShareExtension */;
-			targetProxy = 409C5CC02AEE49B10047F02B /* PBXContainerItemProxy */;
-		};
-		409C5CCB2AEE49B10047F02B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 409C5CAE2AEE49A90047F02B /* ShareExtension */;
-			targetProxy = 409C5CCA2AEE49B10047F02B /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		409C5CD12AEE49B10047F02B /* Debug */ = {
@@ -416,7 +267,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -479,7 +330,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -556,82 +407,6 @@
 			};
 			name = Release;
 		};
-		409C5CD72AEE49B10047F02B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 947748M42W;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.scalefocus.ShareExtensionTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShareExtension.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ShareExtension";
-			};
-			name = Debug;
-		};
-		409C5CD82AEE49B10047F02B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 947748M42W;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.scalefocus.ShareExtensionTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShareExtension.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ShareExtension";
-			};
-			name = Release;
-		};
-		409C5CDA2AEE49B10047F02B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 947748M42W;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.scalefocus.ShareExtensionUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = ShareExtension;
-			};
-			name = Debug;
-		};
-		409C5CDB2AEE49B10047F02B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 947748M42W;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.scalefocus.ShareExtensionUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = ShareExtension;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -649,24 +424,6 @@
 			buildConfigurations = (
 				409C5CD42AEE49B10047F02B /* Debug */,
 				409C5CD52AEE49B10047F02B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		409C5CD62AEE49B10047F02B /* Build configuration list for PBXNativeTarget "ShareExtensionTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				409C5CD72AEE49B10047F02B /* Debug */,
-				409C5CD82AEE49B10047F02B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		409C5CD92AEE49B10047F02B /* Build configuration list for PBXNativeTarget "ShareExtensionUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				409C5CDA2AEE49B10047F02B /* Debug */,
-				409C5CDB2AEE49B10047F02B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
