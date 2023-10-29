@@ -8,6 +8,7 @@
 import Foundation
 
 struct LoginModel: Encodable {
+    
     private(set) var username: String
     private(set) var password: String
 

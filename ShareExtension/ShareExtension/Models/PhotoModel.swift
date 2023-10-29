@@ -8,7 +8,11 @@
 import SwiftUI
 
 struct PhotoModel: Transferable {
-    
+
+    static var transferRepresentation: some TransferRepresentation {
+        ProxyRepresentation(exporting: \.image)
+    }
+
     private(set) var image: Image
     private(set) var caption: String
 
@@ -19,19 +23,4 @@ struct PhotoModel: Transferable {
         self.image = image
         self.caption = caption
     }
-
-    static var transferRepresentation: some TransferRepresentation {
-        ProxyRepresentation(exporting: \.image)
-    }
 }
-
-#if DEBUG
-extension PhotoModel {
-    static var previewData: PhotoModel {
-        .init(
-            image: Image(systemName: "pencil.and.scribble"),
-            caption: "Pencil and scribble"
-        )
-    }
-}
-#endif

@@ -21,6 +21,8 @@ class LoginViewModel: ObservableObject {
     }
 }
 
+// MARK: - Public Methods
+
 extension LoginViewModel {
 
     func validate(completion: @escaping (Bool) -> Void) {

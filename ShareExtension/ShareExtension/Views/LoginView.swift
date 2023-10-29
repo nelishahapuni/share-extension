@@ -9,7 +9,6 @@ import SwiftUI
 
 struct LoginView: View {
 
-
     @State private var isLoginPressed: Bool = false
 
     @ObservedObject private var viewModel: LoginViewModel
@@ -37,10 +36,15 @@ struct LoginView: View {
                 }
         }
     }
+}
 
-    private var usernameInput: some View {
+// MARK: - Private Views
+
+private extension LoginView {
+
+    var usernameInput: some View {
         TextField(
-            "Username",
+            LoginLabel.username,
             text: $viewModel.username
         )
         .autocapitalization(.none)
@@ -48,15 +52,15 @@ struct LoginView: View {
         .padding(.top)
     }
 
-    private var passwordInput: some View {
+    var passwordInput: some View {
         SecureField(
-            "Password",
+            LoginLabel.password,
             text: $viewModel.password
         )
         .padding(.top)
     }
 
-    private var loginButton: some View {
+    var loginButton: some View {
         Button {
             viewModel.validate { isValid in
                 if isValid {
@@ -64,13 +68,29 @@ struct LoginView: View {
                 }
             }
         } label: {
-            Text("Login")
+            Text(LoginLabel.login)
                 .font(.title)
-                .frame(maxWidth: .infinity, maxHeight: 60)
+                .frame(maxWidth: .infinity, maxHeight: LoginButton.maxHeight)
                 .foregroundColor(Color.white)
                 .background(Color.yellow)
-                .cornerRadius(10)
+                .cornerRadius(LoginButton.cornerRadius)
         }
+    }
+}
+
+// MARK: - Constants
+
+private extension LoginView {
+
+    enum LoginButton {
+        static let maxHeight: CGFloat = 60
+        static let cornerRadius: CGFloat = 10
+    }
+
+    enum LoginLabel {
+        static let username = "Username"
+        static let password = "Password"
+        static let login = "Login"
     }
 }
 

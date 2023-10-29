@@ -118,10 +118,10 @@
 			children = (
 				409C5CB22AEE49A90047F02B /* ShareExtensionApp.swift */,
 				409C5CB42AEE49A90047F02B /* ShareExtension.swift */,
-				409C5CB62AEE49B10047F02B /* Assets.xcassets */,
 				409C5CB82AEE49B10047F02B /* Preview Content */,
-				409C5CFA2AEE74B30047F02B /* Views */,
+				409C5D052AEEB3AE0047F02B /* Assets */,
 				409C5CE02AEE5B5D0047F02B /* Models */,
+				409C5CFA2AEE74B30047F02B /* Views */,
 				409C5CF52AEE63B70047F02B /* ViewModels */,
 			);
 			path = ShareExtension;
@@ -172,8 +172,8 @@
 		409C5CFA2AEE74B30047F02B /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				409C5CE12AEE62110047F02B /* LoginView.swift */,
 				409C5CF62AEE74A50047F02B /* HomeView.swift */,
+				409C5CE12AEE62110047F02B /* LoginView.swift */,
 				409C5D042AEEB2B10047F02B /* Components */,
 			);
 			path = Views;
@@ -185,6 +185,14 @@
 				409C5CFB2AEE86D90047F02B /* PhotoPickerView.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		409C5D052AEEB3AE0047F02B /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				409C5CB62AEE49B10047F02B /* Assets.xcassets */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
