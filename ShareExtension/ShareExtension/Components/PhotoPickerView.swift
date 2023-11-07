@@ -83,7 +83,7 @@ private extension PhotoPickerView {
 private extension PhotoPickerView {
 
     enum Picker {
-        static let text = "Upload Image"
+        static let text = "Choose Image"
         static let maxHeight: CGFloat = 60
         static let cornerRadius: CGFloat = 10
     }
