@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		409603F12B08A8F600C36A4C /* CustomShareNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409603F02B08A8F600C36A4C /* CustomShareNavigationController.swift */; };
 		409C5CB32AEE49A90047F02B /* ShareExtensionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409C5CB22AEE49A90047F02B /* ShareExtensionApp.swift */; };
 		409C5CB52AEE49A90047F02B /* ShareExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409C5CB42AEE49A90047F02B /* ShareExtension.swift */; };
 		409C5CB72AEE49B10047F02B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 409C5CB62AEE49B10047F02B /* Assets.xcassets */; };
@@ -17,8 +18,7 @@
 		409C5CEA2AEE62A10047F02B /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409C5CE92AEE62A10047F02B /* LoginModel.swift */; };
 		409C5CF72AEE74A50047F02B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409C5CF62AEE74A50047F02B /* HomeView.swift */; };
 		409C5CFC2AEE86D90047F02B /* PhotoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409C5CFB2AEE86D90047F02B /* PhotoPickerView.swift */; };
-		40C24FF32AF65075007E5625 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C24FF22AF65075007E5625 /* ShareViewController.swift */; };
-		40C24FF62AF65075007E5625 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40C24FF42AF65075007E5625 /* MainInterface.storyboard */; };
+		40C24FF32AF65075007E5625 /* CustomShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C24FF22AF65075007E5625 /* CustomShareViewController.swift */; };
 		40C24FFA2AF65075007E5625 /* CustomShareExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 40C24FF02AF65075007E5625 /* CustomShareExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
@@ -48,6 +48,7 @@
 
 /* Begin PBXFileReference section */
 		4066BF6F2AFA72AC00863A43 /* ShareExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShareExtension.entitlements; sourceTree = "<group>"; };
+		409603F02B08A8F600C36A4C /* CustomShareNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomShareNavigationController.swift; sourceTree = "<group>"; };
 		409C5CAF2AEE49A90047F02B /* ShareExtension.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShareExtension.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		409C5CB22AEE49A90047F02B /* ShareExtensionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareExtensionApp.swift; sourceTree = "<group>"; };
 		409C5CB42AEE49A90047F02B /* ShareExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareExtension.swift; sourceTree = "<group>"; };
@@ -60,8 +61,7 @@
 		409C5CF62AEE74A50047F02B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		409C5CFB2AEE86D90047F02B /* PhotoPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerView.swift; sourceTree = "<group>"; };
 		40C24FF02AF65075007E5625 /* CustomShareExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = CustomShareExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		40C24FF22AF65075007E5625 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
-		40C24FF52AF65075007E5625 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		40C24FF22AF65075007E5625 /* CustomShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomShareViewController.swift; sourceTree = "<group>"; };
 		40C24FF72AF65075007E5625 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -170,8 +170,8 @@
 		40C24FF12AF65075007E5625 /* CustomShareExtension */ = {
 			isa = PBXGroup;
 			children = (
-				40C24FF22AF65075007E5625 /* ShareViewController.swift */,
-				40C24FF42AF65075007E5625 /* MainInterface.storyboard */,
+				40C24FF22AF65075007E5625 /* CustomShareViewController.swift */,
+				409603F02B08A8F600C36A4C /* CustomShareNavigationController.swift */,
 				40C24FF72AF65075007E5625 /* Info.plist */,
 			);
 			path = CustomShareExtension;
@@ -268,7 +268,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				40C24FF62AF65075007E5625 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,7 +313,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				40C24FF32AF65075007E5625 /* ShareViewController.swift in Sources */,
+				409603F12B08A8F600C36A4C /* CustomShareNavigationController.swift in Sources */,
+				40C24FF32AF65075007E5625 /* CustomShareViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,17 +327,6 @@
 			targetProxy = 40C24FF82AF65075007E5625 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		40C24FF42AF65075007E5625 /* MainInterface.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				40C24FF52AF65075007E5625 /* Base */,
-			);
-			name = MainInterface.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		409C5CD12AEE49B10047F02B /* Debug */ = {
