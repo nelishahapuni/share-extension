@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 import MobileCoreServices
 
 class CustomShareViewController: UIViewController {
@@ -50,12 +51,20 @@ class CustomShareViewController: UIViewController {
     }()
 
     private func setupViews() {
-        self.view.addSubview(textField)
+        //self.view.addSubview(textField)
+        let testView = UIHostingController(rootView: TestView())
+        let swiftuiView = testView.view!
+            swiftuiView.translatesAutoresizingMaskIntoConstraints = false
+        addChild(testView)
+        self.view.addSubview(swiftuiView)
+
         NSLayoutConstraint.activate([
-            textField.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
-            textField.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
-            textField.centerYAnchor.constraint(equalTo: self.view.centerYAnchor),
-            textField.heightAnchor.constraint(equalToConstant: 44)
+            swiftuiView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
+            swiftuiView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
+            swiftuiView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor),
+            swiftuiView.heightAnchor.constraint(equalToConstant: 44)
         ])
+
+        testView.didMove(toParent: self)
     }
 }

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		409603F12B08A8F600C36A4C /* CustomShareNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409603F02B08A8F600C36A4C /* CustomShareNavigationController.swift */; };
+		409603F52B08BBCF00C36A4C /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409603F42B08BBCF00C36A4C /* TestView.swift */; };
 		409C5CB32AEE49A90047F02B /* ShareExtensionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409C5CB22AEE49A90047F02B /* ShareExtensionApp.swift */; };
 		409C5CB52AEE49A90047F02B /* ShareExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409C5CB42AEE49A90047F02B /* ShareExtension.swift */; };
 		409C5CB72AEE49B10047F02B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 409C5CB62AEE49B10047F02B /* Assets.xcassets */; };
@@ -49,6 +50,7 @@
 /* Begin PBXFileReference section */
 		4066BF6F2AFA72AC00863A43 /* ShareExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShareExtension.entitlements; sourceTree = "<group>"; };
 		409603F02B08A8F600C36A4C /* CustomShareNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomShareNavigationController.swift; sourceTree = "<group>"; };
+		409603F42B08BBCF00C36A4C /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		409C5CAF2AEE49A90047F02B /* ShareExtension.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShareExtension.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		409C5CB22AEE49A90047F02B /* ShareExtensionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareExtensionApp.swift; sourceTree = "<group>"; };
 		409C5CB42AEE49A90047F02B /* ShareExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareExtension.swift; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 			children = (
 				40C24FF22AF65075007E5625 /* CustomShareViewController.swift */,
 				409603F02B08A8F600C36A4C /* CustomShareNavigationController.swift */,
+				409603F42B08BBCF00C36A4C /* TestView.swift */,
 				40C24FF72AF65075007E5625 /* Info.plist */,
 			);
 			path = CustomShareExtension;
@@ -313,6 +316,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				409603F52B08BBCF00C36A4C /* TestView.swift in Sources */,
 				409603F12B08A8F600C36A4C /* CustomShareNavigationController.swift in Sources */,
 				40C24FF32AF65075007E5625 /* CustomShareViewController.swift in Sources */,
 			);
