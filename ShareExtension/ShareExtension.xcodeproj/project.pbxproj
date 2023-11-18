@@ -8,7 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		409603F12B08A8F600C36A4C /* CustomShareNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409603F02B08A8F600C36A4C /* CustomShareNavigationController.swift */; };
-		409603F52B08BBCF00C36A4C /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409603F42B08BBCF00C36A4C /* TestView.swift */; };
+		409603FE2B08D6D500C36A4C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409C5CF62AEE74A50047F02B /* HomeView.swift */; };
+		409604012B08D6D500C36A4C /* PhotoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409C5CFB2AEE86D90047F02B /* PhotoPickerView.swift */; };
+		409604022B08D73700C36A4C /* PhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409C5CDC2AEE5A630047F02B /* PhotoModel.swift */; };
 		409C5CB32AEE49A90047F02B /* ShareExtensionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409C5CB22AEE49A90047F02B /* ShareExtensionApp.swift */; };
 		409C5CB52AEE49A90047F02B /* ShareExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409C5CB42AEE49A90047F02B /* ShareExtension.swift */; };
 		409C5CB72AEE49B10047F02B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 409C5CB62AEE49B10047F02B /* Assets.xcassets */; };
@@ -50,7 +52,7 @@
 /* Begin PBXFileReference section */
 		4066BF6F2AFA72AC00863A43 /* ShareExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShareExtension.entitlements; sourceTree = "<group>"; };
 		409603F02B08A8F600C36A4C /* CustomShareNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomShareNavigationController.swift; sourceTree = "<group>"; };
-		409603F42B08BBCF00C36A4C /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		409603F72B08D25400C36A4C /* CustomShareExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CustomShareExtension.entitlements; sourceTree = "<group>"; };
 		409C5CAF2AEE49A90047F02B /* ShareExtension.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShareExtension.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		409C5CB22AEE49A90047F02B /* ShareExtensionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareExtensionApp.swift; sourceTree = "<group>"; };
 		409C5CB42AEE49A90047F02B /* ShareExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareExtension.swift; sourceTree = "<group>"; };
@@ -172,9 +174,9 @@
 		40C24FF12AF65075007E5625 /* CustomShareExtension */ = {
 			isa = PBXGroup;
 			children = (
+				409603F72B08D25400C36A4C /* CustomShareExtension.entitlements */,
 				40C24FF22AF65075007E5625 /* CustomShareViewController.swift */,
 				409603F02B08A8F600C36A4C /* CustomShareNavigationController.swift */,
-				409603F42B08BBCF00C36A4C /* TestView.swift */,
 				40C24FF72AF65075007E5625 /* Info.plist */,
 			);
 			path = CustomShareExtension;
@@ -316,7 +318,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				409603F52B08BBCF00C36A4C /* TestView.swift in Sources */,
+				409604022B08D73700C36A4C /* PhotoModel.swift in Sources */,
+				409603FE2B08D6D500C36A4C /* HomeView.swift in Sources */,
+				409604012B08D6D500C36A4C /* PhotoPickerView.swift in Sources */,
 				409603F12B08A8F600C36A4C /* CustomShareNavigationController.swift in Sources */,
 				40C24FF32AF65075007E5625 /* CustomShareViewController.swift in Sources */,
 			);
@@ -456,6 +460,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = ShareExtension/ShareExtension.entitlements;
@@ -487,6 +492,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = ShareExtension/ShareExtension.entitlements;
@@ -517,6 +523,7 @@
 		40C24FFC2AF65075007E5625 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = CustomShareExtension/CustomShareExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 947748M42W;
@@ -543,6 +550,7 @@
 		40C24FFD2AF65075007E5625 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = CustomShareExtension/CustomShareExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 947748M42W;

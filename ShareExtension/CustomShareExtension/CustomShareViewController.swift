@@ -40,29 +40,18 @@ class CustomShareViewController: UIViewController {
         extensionContext?.completeRequest(returningItems: [], completionHandler: nil)
     }
 
-    private lazy var textField: UITextField = {
-        let textField = UITextField()
-        textField.text = "some value"
-        textField.textColor = .black
-        textField.backgroundColor = .yellow
-        textField.translatesAutoresizingMaskIntoConstraints = false
-
-        return textField
-    }()
-
     private func setupViews() {
-        //self.view.addSubview(textField)
-        let testView = UIHostingController(rootView: TestView())
+        let testView = UIHostingController(rootView: HomeView())
         let swiftuiView = testView.view!
             swiftuiView.translatesAutoresizingMaskIntoConstraints = false
         addChild(testView)
         self.view.addSubview(swiftuiView)
 
         NSLayoutConstraint.activate([
+            swiftuiView.topAnchor.constraint(equalTo: self.view.topAnchor),
+            swiftuiView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
             swiftuiView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
-            swiftuiView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
-            swiftuiView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor),
-            swiftuiView.heightAnchor.constraint(equalToConstant: 44)
+            swiftuiView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor)
         ])
 
         testView.didMove(toParent: self)
