@@ -9,53 +9,23 @@ import SwiftUI
 import PhotosUI
 
 struct PhotoPickerView: View {
-
-    @State private var selectedImage: Image?
+    @Binding var images: [IdentifiableImage]
     @State private var photosPickerItem: PhotosPickerItem?
     @State private var uploadError = false
 
     var body: some View {
-        VStack {
-            image
-            photosPicker
-        }
-        .alert(Alert.message, isPresented: $uploadError) {
-            Button(Alert.text, role: .cancel) {
-                uploadError = false
+        photosPicker
+            .alert(Alert.message, isPresented: $uploadError) {
+                Button(Alert.text, role: .cancel) {
+                    uploadError = false
+                }
             }
-        }
     }
 }
 
 // MARK: - Private Views
 
 private extension PhotoPickerView {
-
-    var image: some View {
-        selectedImage?
-            .resizable()
-            .scaledToFit()
-            .toolbar {
-                shareLink
-            }
-    }
-
-    var shareLink: some View {
-        if let selectedImage = selectedImage {
-            let photoModel = PhotoModel(image: selectedImage, caption: Share.caption)
-            return AnyView(
-                ShareLink(
-                    item: photoModel,
-                    preview: SharePreview(
-                        photoModel.caption,
-                        image: photoModel.image
-                    )
-                )
-            )
-        } else {
-            return AnyView(EmptyView())
-        }
-    }
 
     var photosPicker: some View {
         PhotosPicker(selection: $photosPickerItem, matching: .images) {
@@ -69,7 +39,7 @@ private extension PhotoPickerView {
         .onChange(of: photosPickerItem) {
             Task {
                 if let image = try? await photosPickerItem?.loadTransferable(type: Image.self) {
-                    selectedImage = image
+                    images.append(IdentifiableImage(image: image))
                 } else {
                     uploadError = true
                 }
@@ -92,12 +62,8 @@ private extension PhotoPickerView {
         static let message = "There was an issue with uploading your image. Please try again."
         static let text = "OK"
     }
-
-    enum Share {
-        static let caption = "Share this image."
-    }
 }
 
 #Preview {
-    PhotoPickerView()
+    PhotoPickerView(images: Binding.constant([IdentifiableImage(image: Image("rabbit"))]))
 }

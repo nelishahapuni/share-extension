@@ -41,7 +41,7 @@ class CustomShareViewController: UIViewController {
     }
 
     private func setupViews() {
-        let testView = UIHostingController(rootView: HomeView())
+        let testView = UIHostingController(rootView: ExtensionView())
         let swiftuiView = testView.view!
             swiftuiView.translatesAutoresizingMaskIntoConstraints = false
         addChild(testView)
