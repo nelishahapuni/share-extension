@@ -4,12 +4,20 @@
 <dict>
 	<key>NSExtension</key>
 	<dict>
+		<key>NSExtensionOverridesHostUIAppearance</key>
+		<true/>
 		<key>NSExtensionPrincipalClass</key>
 		<string>CustomShareNavigationController</string>
 		<key>NSExtensionAttributes</key>
 		<dict>
+			<key>NSExtensionPointName</key>
+			<string>com.apple.share-services</string>
+			<key>NSExtensionPointVersion</key>
+			<string>1</string>
 			<key>NSExtensionActivationRule</key>
 			<dict>
+				<key>NSExtensionActivationSupportsImage</key>
+				<true/>
 				<key>NSExtensionActivationSupportsWebPageWithMaxCount</key>
 				<integer>1</integer>
 				<key>NSExtensionActivationSupportsImageWithMaxCount</key>
