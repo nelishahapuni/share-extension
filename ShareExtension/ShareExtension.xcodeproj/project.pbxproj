@@ -19,7 +19,9 @@
 		409C5CEA2AEE62A10047F02B /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409C5CE92AEE62A10047F02B /* LoginModel.swift */; };
 		409C5CF72AEE74A50047F02B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409C5CF62AEE74A50047F02B /* HomeView.swift */; };
 		409C5CFC2AEE86D90047F02B /* PhotoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409C5CFB2AEE86D90047F02B /* PhotoPickerView.swift */; };
-		40B42C102B6CEA1200F8DB53 /* ExtensionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B42C0F2B6CEA1200F8DB53 /* ExtensionView.swift */; };
+		40ACA97A2B70E92D00AE316E /* ExtensionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ACA9792B70E92D00AE316E /* ExtensionViewModel.swift */; };
+		40ACA97B2B7134AA00AE316E /* ExtensionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B42C0F2B6CEA1200F8DB53 /* ExtensionView.swift */; };
+		40ACA97C2B7134BC00AE316E /* ExtensionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ACA9792B70E92D00AE316E /* ExtensionViewModel.swift */; };
 		40B42C112B6CEA8900F8DB53 /* ExtensionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B42C0F2B6CEA1200F8DB53 /* ExtensionView.swift */; };
 		40B42C132B6CEFE200F8DB53 /* IdentifiableImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B42C122B6CEFE200F8DB53 /* IdentifiableImage.swift */; };
 		40B42C152B6CF23400F8DB53 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B42C142B6CF23400F8DB53 /* ImageView.swift */; };
@@ -66,6 +68,7 @@
 		409C5CE92AEE62A10047F02B /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		409C5CF62AEE74A50047F02B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		409C5CFB2AEE86D90047F02B /* PhotoPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerView.swift; sourceTree = "<group>"; };
+		40ACA9792B70E92D00AE316E /* ExtensionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionViewModel.swift; sourceTree = "<group>"; };
 		40B42C0F2B6CEA1200F8DB53 /* ExtensionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionView.swift; sourceTree = "<group>"; };
 		40B42C122B6CEFE200F8DB53 /* IdentifiableImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifiableImage.swift; sourceTree = "<group>"; };
 		40B42C142B6CF23400F8DB53 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
@@ -148,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				409C5CE52AEE62690047F02B /* LoginViewModel.swift */,
+				40ACA9792B70E92D00AE316E /* ExtensionViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -312,13 +316,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				409C5CF72AEE74A50047F02B /* HomeView.swift in Sources */,
-				40B42C102B6CEA1200F8DB53 /* ExtensionView.swift in Sources */,
 				409C5CDD2AEE5A630047F02B /* PhotoModel.swift in Sources */,
 				409C5CB52AEE49A90047F02B /* ShareExtension.swift in Sources */,
 				409C5CFC2AEE86D90047F02B /* PhotoPickerView.swift in Sources */,
+				40ACA97C2B7134BC00AE316E /* ExtensionViewModel.swift in Sources */,
 				409C5CE22AEE62110047F02B /* LoginView.swift in Sources */,
 				40B42C152B6CF23400F8DB53 /* ImageView.swift in Sources */,
 				409C5CEA2AEE62A10047F02B /* LoginModel.swift in Sources */,
+				40ACA97B2B7134AA00AE316E /* ExtensionView.swift in Sources */,
 				409C5CE62AEE62690047F02B /* LoginViewModel.swift in Sources */,
 				409C5CB32AEE49A90047F02B /* ShareExtensionApp.swift in Sources */,
 				40B42C132B6CEFE200F8DB53 /* IdentifiableImage.swift in Sources */,
@@ -333,6 +338,7 @@
 				409603F12B08A8F600C36A4C /* CustomShareNavigationController.swift in Sources */,
 				40B42C112B6CEA8900F8DB53 /* ExtensionView.swift in Sources */,
 				40C24FF32AF65075007E5625 /* CustomShareViewController.swift in Sources */,
+				40ACA97A2B70E92D00AE316E /* ExtensionViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
