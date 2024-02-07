@@ -25,8 +25,8 @@ struct LoginModel: Encodable {
 extension LoginModel {
     static var previewData: LoginModel {
         .init(
-            username: "nelkin",
-            password: "mypassword"
+            username: Strings.testUsername,
+            password: Strings.testPassword
         )
     }
 }

@@ -44,7 +44,7 @@ private extension LoginView {
 
     var usernameInput: some View {
         TextField(
-            LoginLabel.username,
+            Strings.username,
             text: $viewModel.username
         )
         .autocapitalization(.none)
@@ -54,7 +54,7 @@ private extension LoginView {
 
     var passwordInput: some View {
         SecureField(
-            LoginLabel.password,
+            Strings.password,
             text: $viewModel.password
         )
         .padding(.top)
@@ -68,29 +68,13 @@ private extension LoginView {
                 }
             }
         } label: {
-            Text(LoginLabel.login)
+            Text(Strings.login)
                 .font(.title)
-                .frame(maxWidth: .infinity, maxHeight: LoginButton.maxHeight)
+                .frame(maxWidth: .infinity, maxHeight: Numbers.loginMaxHeight)
                 .foregroundColor(Color.white)
                 .background(Color.yellow)
-                .cornerRadius(LoginButton.cornerRadius)
+                .cornerRadius(Numbers.loginCornerRadius)
         }
-    }
-}
-
-// MARK: - Constants
-
-private extension LoginView {
-
-    enum LoginButton {
-        static let maxHeight: CGFloat = 60
-        static let cornerRadius: CGFloat = 10
-    }
-
-    enum LoginLabel {
-        static let username = "Username"
-        static let password = "Password"
-        static let login = "Login"
     }
 }
 

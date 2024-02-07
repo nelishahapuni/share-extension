@@ -8,6 +8,9 @@
 import Foundation
 
 struct Numbers {
+    static let loginMaxHeight: CGFloat = 60
+    static let loginCornerRadius: CGFloat = 10
+
     static let columnSpacing: CGFloat = 10
     static let numberOfColumns: Int = 3
     static let rowSpacing: CGFloat = 10

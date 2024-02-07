@@ -16,15 +16,13 @@ struct ExtensionView: View {
 
     var body: some View {
         VStack {
-            if let image = viewModel.image {
-                Image(uiImage: image)
-                    .resizable()
-                    .clipShape(Rectangle())
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: Numbers.sharedImageSize, height: Numbers.sharedImageSize)
-            }
+            Image(uiImage: viewModel.image)
+                .resizable()
+                .clipShape(Rectangle())
+                .aspectRatio(contentMode: .fit)
+                .frame(width: Numbers.sharedImageSize, height: Numbers.sharedImageSize)
             Button {
-                viewModel.saveDataToDocuments(viewModel.image?.pngData())
+                viewModel.saveDataToDocuments(viewModel.image.pngData())
             } label: {
                 Text(Strings.shareMessage)
                     .bold()
@@ -37,5 +35,5 @@ struct ExtensionView: View {
 }
 
 #Preview {
-    ExtensionView(viewModel: ExtensionViewModel(image: UIImage(named: "rabbit")))
+    ExtensionView(viewModel: ExtensionViewModel(image: UIImage()))
 }

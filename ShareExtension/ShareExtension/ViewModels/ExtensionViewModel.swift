@@ -9,19 +9,19 @@ import Foundation
 import SwiftUI
 
 class ExtensionViewModel {
-    let image: UIImage?
+    let image: UIImage
 
-    init(image: UIImage?) {
+    init(image: UIImage) {
         self.image = image
     }
 
-    func saveDataToDocuments(_ data: Data?, imageFileName: String = "myImage_\(Int.random(in: 1...10000)).jpg") {
+    func saveDataToDocuments(_ data: Data?, imageFileName: String = Strings.sharedImageName) {
         guard let imageFileURL = getDocumentsDirectory()?.appendingPathComponent(imageFileName) else { return }
 
         do {
             try data?.write(to: imageFileURL)
         } catch {
-            print("Error = \(error)")
+            print(error)
         }
     }
 }

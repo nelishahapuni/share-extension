@@ -10,6 +10,8 @@ import SwiftUI
 import MobileCoreServices
 
 class CustomShareViewController: UIViewController {
+    private var extensionViewModel: ExtensionViewModel?
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -17,13 +19,15 @@ class CustomShareViewController: UIViewController {
            let attachments = (extensionItems[0] as? NSExtensionItem)?.attachments {
             let urlProvider = attachments[0] as NSItemProvider
 
-            urlProvider.loadItem(forTypeIdentifier: "public.url", options: nil) { [weak self] (decoder: NSSecureCoding!, _) -> Void in
+            urlProvider.loadItem(forTypeIdentifier: Strings.publicURL,
+                                 options: nil) { [weak self] (decoder: NSSecureCoding!, error) -> Void in
                 if let url = decoder as? NSURL,
                    let imageData = NSData(contentsOf: url as URL),
                    let uiimg = UIImage(data: imageData as Data) {
                     DispatchQueue.main.async { [weak self] in
                         self?.setupViews(image: uiimg)
                     }
+                    // TODO: - Handle Error Case
                 }
             }
         }
@@ -52,7 +56,9 @@ class CustomShareViewController: UIViewController {
     }
 
     private func setupViews(image: UIImage) {
-        let extensionViewModel = ExtensionViewModel(image: image)
+        extensionViewModel = ExtensionViewModel(image: image)
+        guard let extensionViewModel else { return }
+
         let testView = UIHostingController(rootView: ExtensionView(viewModel: extensionViewModel))
         guard let swiftuiView = testView.view else { return }
 
