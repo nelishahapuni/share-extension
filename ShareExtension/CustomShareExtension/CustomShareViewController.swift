@@ -10,11 +10,9 @@ import SwiftUI
 import MobileCoreServices
 
 class CustomShareViewController: UIViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Try to get input items
         if let extensionItems = extensionContext?.inputItems,
            let attachments = (extensionItems[0] as? NSExtensionItem)?.attachments {
             let urlProvider = attachments[0] as NSItemProvider
@@ -35,7 +33,7 @@ class CustomShareViewController: UIViewController {
     }
 
     private func setupNavBar() {
-        navigationItem.title = "Custom Share Extension"
+        navigationItem.title = Strings.customShareExtension
 
         let itemCancel = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(cancelAction))
         navigationItem.setLeftBarButton(itemCancel, animated: false)
@@ -45,7 +43,7 @@ class CustomShareViewController: UIViewController {
     }
 
     @objc private func cancelAction () {
-        let error = NSError(domain: "some.bundle.identifier", code: 0, userInfo: [NSLocalizedDescriptionKey: "An error description"])
+        let error = NSError(domain: Strings.bundleIdentifier, code: 0, userInfo: [NSLocalizedDescriptionKey: Strings.cancelError])
         extensionContext?.cancelRequest(withError: error)
     }
 

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ImageView: View {
     private var image: Image
+
     init(image: Image) {
         self.image = image
     }
@@ -21,19 +22,11 @@ struct ImageView: View {
                 ShareLink(
                     item: image,
                     preview: SharePreview(
-                        Share.caption,
+                        Strings.shareCaption,
                         image: image
                     )
                 )
             }
-    }
-}
-
-// MARK: - Constants
-
-private extension ImageView {
-    enum Share {
-        static let caption = "Share this image."
     }
 }
 

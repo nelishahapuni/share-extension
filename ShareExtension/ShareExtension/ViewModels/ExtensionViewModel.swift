@@ -9,7 +9,6 @@ import Foundation
 import SwiftUI
 
 class ExtensionViewModel {
-
     let image: UIImage?
 
     init(image: UIImage?) {
@@ -30,7 +29,7 @@ class ExtensionViewModel {
 private extension ExtensionViewModel {
 
     private func getDocumentsDirectory() -> URL? {
-        let paths = "/Users/neli.shahapuni/Documents/share-extension"
+        let paths = Strings.directoryPath
         return URL(fileURLWithPath: paths)
     }
 }

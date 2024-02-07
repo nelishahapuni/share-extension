@@ -8,13 +8,16 @@
 import SwiftUI
 
 struct HomeView: View {
+    @State private var isImagePresented: Bool = false
+    @State private var images: [IdentifiableImage] = []
+
     private var columns: [GridItem] = []
     private let rowSpacing: CGFloat
 
     public init(
-        columnSpacing: CGFloat = 10,
-        numberOfColumns: Int = 3,
-        rowSpacing: CGFloat = 10
+        columnSpacing: CGFloat = Numbers.columnSpacing,
+        numberOfColumns: Int = Numbers.numberOfColumns,
+        rowSpacing: CGFloat = Numbers.rowSpacing
     ) {
         columns.append(
             contentsOf: repeatElement(
@@ -27,9 +30,6 @@ struct HomeView: View {
         )
         self.rowSpacing = rowSpacing
     }
-
-    @State private var isImagePresented: Bool = false
-    @State private var images: [IdentifiableImage] = []
 
     var body: some View {
         VStack {

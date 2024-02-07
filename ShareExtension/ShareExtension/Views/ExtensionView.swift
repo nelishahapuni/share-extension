@@ -21,12 +21,12 @@ struct ExtensionView: View {
                     .resizable()
                     .clipShape(Rectangle())
                     .aspectRatio(contentMode: .fit)
-                    .frame(width: 300, height: 300)
+                    .frame(width: Numbers.sharedImageSize, height: Numbers.sharedImageSize)
             }
             Button {
                 viewModel.saveDataToDocuments(viewModel.image?.pngData())
             } label: {
-                Text("Save to Project Folder")
+                Text(Strings.shareMessage)
                     .bold()
                     .foregroundStyle(.black)
                     .padding()

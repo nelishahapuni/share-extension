@@ -15,8 +15,8 @@ struct PhotoPickerView: View {
 
     var body: some View {
         photosPicker
-            .alert(Alert.message, isPresented: $uploadError) {
-                Button(Alert.text, role: .cancel) {
+            .alert(Strings.uploadError, isPresented: $uploadError) {
+                Button(Strings.uploadText, role: .cancel) {
                     uploadError = false
                 }
             }
@@ -29,12 +29,12 @@ private extension PhotoPickerView {
 
     var photosPicker: some View {
         PhotosPicker(selection: $photosPickerItem, matching: .images) {
-            Text(Picker.text)
+            Text(Strings.pickerText)
                 .font(.title)
-                .frame(maxWidth: .infinity, maxHeight: Picker.maxHeight)
+                .frame(maxWidth: .infinity, maxHeight: Numbers.pickerMaxHeight)
                 .foregroundColor(Color.white)
                 .background(Color.purple)
-                .cornerRadius(Picker.cornerRadius)
+                .cornerRadius(Numbers.pickerCornerRadius)
         }
         .onChange(of: photosPickerItem) {
             Task {
@@ -48,22 +48,6 @@ private extension PhotoPickerView {
     }
 }
 
-// MARK: - Constants
-
-private extension PhotoPickerView {
-
-    enum Picker {
-        static let text = "Choose Image"
-        static let maxHeight: CGFloat = 60
-        static let cornerRadius: CGFloat = 10
-    }
-
-    enum Alert {
-        static let message = "There was an issue with uploading your image. Please try again."
-        static let text = "OK"
-    }
-}
-
 #Preview {
-    PhotoPickerView(images: Binding.constant([IdentifiableImage(image: Image("rabbit"))]))
+    PhotoPickerView(images: Binding.constant([IdentifiableImage(image: Image(Strings.testAsset))]))
 }
