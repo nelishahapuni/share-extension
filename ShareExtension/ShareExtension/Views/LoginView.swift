@@ -8,10 +8,8 @@
 import SwiftUI
 
 struct LoginView: View {
-
-    @State private var isLoginPressed: Bool = false
-
     @ObservedObject private var viewModel: LoginViewModel
+    @State private var isLoginPressed: Bool = false
 
     public init(viewModel: LoginViewModel) {
         self.viewModel = viewModel
