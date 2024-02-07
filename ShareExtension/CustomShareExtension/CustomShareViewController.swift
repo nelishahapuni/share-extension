@@ -13,26 +13,37 @@ class CustomShareViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // 1: Set the background and call the function to create the navigation bar
-        self.view.backgroundColor = .systemGray6
+        if let extensionItems = extensionContext?.inputItems,
+           let attachments = (extensionItems[0] as? NSExtensionItem)?.attachments {
+            let urlProvider = attachments[0] as NSItemProvider
+
+            urlProvider.loadItem(forTypeIdentifier: "public.url", options: nil) { [weak self] (decoder: NSSecureCoding!, _) -> Void in
+                if let url = decoder as? NSURL,
+                   let imageData = NSData(contentsOf: url as URL),
+                   let uiimg = UIImage(data: imageData as Data) {
+                    DispatchQueue.main.async { [weak self] in
+                        self?.setupViews(image: uiimg)
+                    }
+                }
+            }
+        }
+
+        view.backgroundColor = .systemGray6
         setupNavBar()
-        setupViews()
     }
 
-    // 2: Set the title and the navigation items
     private func setupNavBar() {
-        self.navigationItem.title = "Custom Share Extension"
+        navigationItem.title = Strings.customShareExtension
 
         let itemCancel = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(cancelAction))
-        self.navigationItem.setLeftBarButton(itemCancel, animated: false)
+        navigationItem.setLeftBarButton(itemCancel, animated: false)
 
         let itemDone = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(doneAction))
-        self.navigationItem.setRightBarButton(itemDone, animated: false)
+        navigationItem.setRightBarButton(itemDone, animated: false)
     }
 
-    // 3: Define the actions for the navigation items
     @objc private func cancelAction () {
-        let error = NSError(domain: "some.bundle.identifier", code: 0, userInfo: [NSLocalizedDescriptionKey: "An error description"])
+        let error = NSError(domain: Strings.bundleIdentifier, code: 0, userInfo: [NSLocalizedDescriptionKey: Strings.cancelError])
         extensionContext?.cancelRequest(withError: error)
     }
 
@@ -40,20 +51,20 @@ class CustomShareViewController: UIViewController {
         extensionContext?.completeRequest(returningItems: [], completionHandler: nil)
     }
 
-    private func setupViews() {
-        let testView = UIHostingController(rootView: HomeView())
-        let swiftuiView = testView.view!
-            swiftuiView.translatesAutoresizingMaskIntoConstraints = false
+    private func setupViews(image: UIImage) {
+        let extensionViewModel = ExtensionViewModel(image: image)
+        let testView = UIHostingController(rootView: ExtensionView(viewModel: extensionViewModel))
+        guard let swiftuiView = testView.view else { return }
+
+        swiftuiView.translatesAutoresizingMaskIntoConstraints = false
         addChild(testView)
-        self.view.addSubview(swiftuiView)
-
+        view.addSubview(swiftuiView)
         NSLayoutConstraint.activate([
-            swiftuiView.topAnchor.constraint(equalTo: self.view.topAnchor),
-            swiftuiView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
-            swiftuiView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
-            swiftuiView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor)
+            swiftuiView.topAnchor.constraint(equalTo: view.topAnchor),
+            swiftuiView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            swiftuiView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            swiftuiView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
         ])
-
         testView.didMove(toParent: self)
     }
 }
