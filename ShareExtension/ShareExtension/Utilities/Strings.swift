@@ -8,6 +8,14 @@
 import Foundation
 
 struct Strings {
+    static let username = "Username"
+    static let password = "Password"
+    static let login = "Login"
+
+    static let testUsername = "nelkin"
+    static let testPassword = "mypassword"
+
+    static let sharedImageName = "myImage_\(Int.random(in: 1...10000)).jpg"
     static let directoryPath = "/Users/neli.shahapuni/Documents/share-extension"
     static let testAsset = "rabbit"
 
@@ -18,6 +26,7 @@ struct Strings {
     static let shareCaption = "Share this image."
     static let shareMessage = "Save to Project Folder"
 
+    static let publicURL = "public.url"
     static let customShareExtension = "Custom Share Extension"
     static let bundleIdentifier = "com.scalefocus.ShareExtension"
     static let cancelError = "The action has been cancelled"

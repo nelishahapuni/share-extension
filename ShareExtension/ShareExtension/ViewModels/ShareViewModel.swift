@@ -1,5 +1,5 @@
 //
-//  ExtensionViewModel.swift
+//  ShareViewModel.swift
 //  CustomShareExtension
 //
 //  Created by Neli Shahapuni on 5.02.24.
@@ -8,25 +8,23 @@
 import Foundation
 import SwiftUI
 
-class ExtensionViewModel {
-    let image: UIImage?
+class ShareViewModel: ObservableObject {
+    @Published var uploadStatus = UploadStatus(success: false)
+    @Published var image: UIImage?
 
-    init(image: UIImage?) {
-        self.image = image
-    }
-
-    func saveDataToDocuments(_ data: Data?, imageFileName: String = "myImage_\(Int.random(in: 1...10000)).jpg") {
+    func saveDataToDocuments(_ data: Data?, imageFileName: String = Strings.sharedImageName) {
         guard let imageFileURL = getDocumentsDirectory()?.appendingPathComponent(imageFileName) else { return }
 
         do {
             try data?.write(to: imageFileURL)
+            uploadStatus.success = true
         } catch {
-            print("Error = \(error)")
+            uploadStatus.error = error
         }
     }
 }
 
-private extension ExtensionViewModel {
+private extension ShareViewModel {
 
     private func getDocumentsDirectory() -> URL? {
         let paths = Strings.directoryPath

@@ -1,5 +1,5 @@
 //
-//  ExtensionView.swift
+//  ShareView.swift
 //  ShareExtension
 //
 //  Created by Neli Shahapuni on 2.02.24.
@@ -7,10 +7,10 @@
 
 import SwiftUI
 
-struct ExtensionView: View {
-    private var viewModel: ExtensionViewModel
+struct ShareView: View {
+    private var viewModel: ShareViewModel
 
-    public init(viewModel: ExtensionViewModel) {
+    public init(viewModel: ShareViewModel) {
         self.viewModel = viewModel
     }
 
@@ -37,5 +37,5 @@ struct ExtensionView: View {
 }
 
 #Preview {
-    ExtensionView(viewModel: ExtensionViewModel(image: UIImage(named: "rabbit")))
+    ShareView(viewModel: ShareViewModel())
 }

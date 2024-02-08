@@ -31,5 +31,5 @@ struct ImageView: View {
 }
 
 #Preview {
-    ImageView(image: Image("rabbit"))
+    ImageView(image: Image(Strings.testAsset))
 }

@@ -7,32 +7,26 @@
 
 import UIKit
 import SwiftUI
+import Combine
 import MobileCoreServices
 
 class CustomShareViewController: UIViewController {
+    @ObservedObject private var shareViewModel: ShareViewModel = ShareViewModel()
+    private var cancellables = Set<AnyCancellable>()
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if let extensionItems = extensionContext?.inputItems,
-           let attachments = (extensionItems[0] as? NSExtensionItem)?.attachments {
-            let urlProvider = attachments[0] as NSItemProvider
-
-            urlProvider.loadItem(forTypeIdentifier: "public.url", options: nil) { [weak self] (decoder: NSSecureCoding!, _) -> Void in
-                if let url = decoder as? NSURL,
-                   let imageData = NSData(contentsOf: url as URL),
-                   let uiimg = UIImage(data: imageData as Data) {
-                    DispatchQueue.main.async { [weak self] in
-                        self?.setupViews(image: uiimg)
-                    }
-                }
-            }
-        }
-
-        view.backgroundColor = .systemGray6
+        subscribeToViewModel()
+        loadExtensionItem()
         setupNavBar()
     }
+}
 
-    private func setupNavBar() {
+// MARK: - Private Methods
+
+private extension CustomShareViewController {
+    func setupNavBar() {
         navigationItem.title = Strings.customShareExtension
 
         let itemCancel = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(cancelAction))
@@ -42,22 +36,57 @@ class CustomShareViewController: UIViewController {
         navigationItem.setRightBarButton(itemDone, animated: false)
     }
 
-    @objc private func cancelAction () {
+    @objc func cancelAction () {
         let error = NSError(domain: Strings.bundleIdentifier, code: 0, userInfo: [NSLocalizedDescriptionKey: Strings.cancelError])
         extensionContext?.cancelRequest(withError: error)
     }
 
-    @objc private func doneAction() {
+    @objc func doneAction() {
         extensionContext?.completeRequest(returningItems: [], completionHandler: nil)
     }
 
-    private func setupViews(image: UIImage) {
-        let extensionViewModel = ExtensionViewModel(image: image)
-        let testView = UIHostingController(rootView: ExtensionView(viewModel: extensionViewModel))
-        guard let swiftuiView = testView.view else { return }
+    func subscribeToViewModel() {
+        shareViewModel.$uploadStatus.sink { [weak self] status in
+            guard let self else { return }
+            if status.success {
+                extensionContext?.completeRequest(returningItems: [], completionHandler: nil)
+            } else {
+                guard let error = status.error else { return }
+                extensionContext?.cancelRequest(withError: error)
+            }
+        }
+        .store(in: &cancellables)
+    }
+
+    func loadExtensionItem() {
+        if let extensionItems = extensionContext?.inputItems,
+           let attachments = (extensionItems[0] as? NSExtensionItem)?.attachments {
+            let urlProvider = attachments[0] as NSItemProvider
+
+            urlProvider.loadItem(forTypeIdentifier: Strings.publicURL,
+                                 options: nil) { [weak self] (decoder: NSSecureCoding!, error: Error!) -> Void in
+                guard let url = decoder as? NSURL,
+                      let imageData = NSData(contentsOf: url as URL),
+                      let uiimg = UIImage(data: imageData as Data) else {
+
+                    self?.extensionContext?.cancelRequest(withError: error)
+                    return
+                }
+                DispatchQueue.main.async { [weak self] in
+                    guard let self else { return }
+                    shareViewModel.image = uiimg
+                    setupViews(shareView: ShareView(viewModel: shareViewModel))
+                }
+            }
+        }
+    }
+
+    func setupViews(shareView: ShareView) {
+        let shareView = UIHostingController(rootView: shareView)
+        guard let swiftuiView = shareView.view else { return }
 
         swiftuiView.translatesAutoresizingMaskIntoConstraints = false
-        addChild(testView)
+        addChild(shareView)
         view.addSubview(swiftuiView)
         NSLayoutConstraint.activate([
             swiftuiView.topAnchor.constraint(equalTo: view.topAnchor),
@@ -65,6 +94,7 @@ class CustomShareViewController: UIViewController {
             swiftuiView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             swiftuiView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
         ])
-        testView.didMove(toParent: self)
+        shareView.didMove(toParent: self)
+        view.backgroundColor = .systemGray6
     }
 }
