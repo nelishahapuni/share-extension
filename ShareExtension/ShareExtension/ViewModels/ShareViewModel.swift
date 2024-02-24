@@ -12,8 +12,8 @@ class ShareViewModel: ObservableObject {
     @Published var uploadStatus = UploadStatus(success: false)
     @Published var image: UIImage?
 
-    func saveDataToDocuments(_ data: Data?, imageFileName: String = Strings.sharedImageName) {
-        guard let imageFileURL = getDocumentsDirectory()?.appendingPathComponent(imageFileName) else { return }
+    func saveDataToDocuments(_ data: Data?) {
+        let imageFileURL = URL.documentsDirectory.appendingPathComponent("myImage_\(Int.random(in: 1...10000)).jpg")
 
         do {
             try data?.write(to: imageFileURL)
@@ -21,13 +21,5 @@ class ShareViewModel: ObservableObject {
         } catch {
             uploadStatus.error = error
         }
-    }
-}
-
-private extension ShareViewModel {
-
-    private func getDocumentsDirectory() -> URL? {
-        let paths = Strings.directoryPath
-        return URL(fileURLWithPath: paths)
     }
 }
