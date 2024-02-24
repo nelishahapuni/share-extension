@@ -8,6 +8,7 @@
 import Foundation
 
 class LoginViewModel: ObservableObject {
+
     @Published var username: String
     @Published var password: String
 
@@ -30,7 +31,17 @@ extension LoginViewModel {
     func validate(completion: @escaping (Bool) -> Void) {
         if !username.isEmpty,
            !password.isEmpty {
+            setUID(token.uuidString)
             completion(true)
         }
+    }
+}
+
+// MARK: - Private Method
+
+private extension LoginViewModel {
+    func setUID(_ token: String) {
+        UserDefaultManager.shared.set(token, for: .token)
+        UserDefaultManager.shared.set(true, for: .isLoggedIn)
     }
 }

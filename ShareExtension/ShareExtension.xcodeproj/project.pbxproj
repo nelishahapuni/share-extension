@@ -33,6 +33,8 @@
 		40B42C132B6CEFE200F8DB53 /* IdentifiableImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B42C122B6CEFE200F8DB53 /* IdentifiableImage.swift */; };
 		40B42C152B6CF23400F8DB53 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B42C142B6CF23400F8DB53 /* ImageView.swift */; };
 		40C24FFA2AF65075007E5625 /* CustomShareExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 40C24FF02AF65075007E5625 /* CustomShareExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		40D7FF1A2B8A16CF00BD9249 /* UserDefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D7FF192B8A16CF00BD9249 /* UserDefaultManager.swift */; };
+		40D7FF1C2B8A170C00BD9249 /* UserDefaultsKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D7FF1B2B8A170C00BD9249 /* UserDefaultsKey.swift */; };
 		40D8879D2B8D17DA0098B6AB /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D8879C2B8D17DA0098B6AB /* String+Extensions.swift */; };
 		40D8879E2B8D19CA0098B6AB /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D8879C2B8D17DA0098B6AB /* String+Extensions.swift */; };
 /* End PBXBuildFile section */
@@ -210,6 +212,15 @@
 			path = CustomShareExtension;
 			sourceTree = "<group>";
 		};
+		40D7FF1D2B8A171700BD9249 /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				40D7FF192B8A16CF00BD9249 /* UserDefaultManager.swift */,
+				40D7FF1B2B8A170C00BD9249 /* UserDefaultsKey.swift */,
+			);
+			path = UserDefaults;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -333,12 +344,14 @@
 			files = (
 				409C5CF72AEE74A50047F02B /* HomeView.swift in Sources */,
 				409C5CDD2AEE5A630047F02B /* PhotoModel.swift in Sources */,
+				40D7FF1A2B8A16CF00BD9249 /* UserDefaultManager.swift in Sources */,
 				40ACA9832B73AB8D00AE316E /* Numbers.swift in Sources */,
 				409C5CB52AEE49A90047F02B /* ShareExtension.swift in Sources */,
 				40D8879D2B8D17DA0098B6AB /* String+Extensions.swift in Sources */,
 				409C5CFC2AEE86D90047F02B /* PhotoPickerView.swift in Sources */,
 				40ACA97C2B7134BC00AE316E /* ShareViewModel.swift in Sources */,
 				409C5CE22AEE62110047F02B /* LoginView.swift in Sources */,
+				40D7FF1C2B8A170C00BD9249 /* UserDefaultsKey.swift in Sources */,
 				40B42C152B6CF23400F8DB53 /* ImageView.swift in Sources */,
 				40ACA97F2B73A81D00AE316E /* Strings.swift in Sources */,
 				409C5CEA2AEE62A10047F02B /* LoginModel.swift in Sources */,
