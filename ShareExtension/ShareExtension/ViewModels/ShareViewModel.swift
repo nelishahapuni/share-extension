@@ -13,7 +13,8 @@ class ShareViewModel: ObservableObject {
     @Published var image: UIImage?
 
     func saveDataToDocuments(_ data: Data?) {
-        let imageFileURL = URL.documentsDirectory.appendingPathComponent("myImage_\(Int.random(in: 1...10000)).jpg")
+        let imageName = String.generateRandomImageName()
+        let imageFileURL = URL.documentsDirectory.appendingPathComponent(imageName)
 
         do {
             try data?.write(to: imageFileURL)
