@@ -33,6 +33,8 @@
 		40B42C132B6CEFE200F8DB53 /* IdentifiableImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B42C122B6CEFE200F8DB53 /* IdentifiableImage.swift */; };
 		40B42C152B6CF23400F8DB53 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B42C142B6CF23400F8DB53 /* ImageView.swift */; };
 		40C24FFA2AF65075007E5625 /* CustomShareExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 40C24FF02AF65075007E5625 /* CustomShareExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		40D8879D2B8D17DA0098B6AB /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D8879C2B8D17DA0098B6AB /* String+Extensions.swift */; };
+		40D8879E2B8D19CA0098B6AB /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D8879C2B8D17DA0098B6AB /* String+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +86,7 @@
 		40C24FF02AF65075007E5625 /* CustomShareExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = CustomShareExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		40C24FF22AF65075007E5625 /* CustomShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomShareViewController.swift; sourceTree = "<group>"; };
 		40C24FF72AF65075007E5625 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		40D8879C2B8D17DA0098B6AB /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +194,7 @@
 			children = (
 				40ACA97D2B73A81800AE316E /* Strings.swift */,
 				40ACA9822B73AB8D00AE316E /* Numbers.swift */,
+				40D8879C2B8D17DA0098B6AB /* String+Extensions.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -331,6 +335,7 @@
 				409C5CDD2AEE5A630047F02B /* PhotoModel.swift in Sources */,
 				40ACA9832B73AB8D00AE316E /* Numbers.swift in Sources */,
 				409C5CB52AEE49A90047F02B /* ShareExtension.swift in Sources */,
+				40D8879D2B8D17DA0098B6AB /* String+Extensions.swift in Sources */,
 				409C5CFC2AEE86D90047F02B /* PhotoPickerView.swift in Sources */,
 				40ACA97C2B7134BC00AE316E /* ShareViewModel.swift in Sources */,
 				409C5CE22AEE62110047F02B /* LoginView.swift in Sources */,
@@ -353,6 +358,7 @@
 				409603F12B08A8F600C36A4C /* CustomShareNavigationController.swift in Sources */,
 				40ACA9842B73AC8D00AE316E /* Numbers.swift in Sources */,
 				40B42C112B6CEA8900F8DB53 /* ShareView.swift in Sources */,
+				40D8879E2B8D19CA0098B6AB /* String+Extensions.swift in Sources */,
 				40ACA9882B73D1A700AE316E /* CustomShareViewController.swift in Sources */,
 				40ACA9812B73A8B200AE316E /* Strings.swift in Sources */,
 				40ACA9892B73D21000AE316E /* UploadStatus.swift in Sources */,
