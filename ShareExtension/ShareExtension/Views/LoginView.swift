@@ -30,7 +30,7 @@ struct LoginView: View {
             .padding(.horizontal)
             .navigationDestination(
                 isPresented: $isLoginPressed) {
-                    HomeView()
+                    HomeView(viewModel: HomeViewModel())
                 }
         }
     }

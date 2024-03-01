@@ -39,7 +39,9 @@ private extension PhotoPickerView {
         .onChange(of: photosPickerItem) {
             Task {
                 if let image = try? await photosPickerItem?.loadTransferable(type: Image.self) {
-                    images.append(IdentifiableImage(image: image))
+                    DispatchQueue.main.async {
+                        images.append(IdentifiableImage(image: image))
+                    }
                 } else {
                     uploadError = true
                 }

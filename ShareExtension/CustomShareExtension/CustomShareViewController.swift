@@ -17,24 +17,13 @@ class CustomShareViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        subscribeToViewModel()
-        loadExtensionItem()
-        setupNavBar()
+        authenticateToken()
     }
 }
 
 // MARK: - Private Methods
 
 private extension CustomShareViewController {
-    func setupNavBar() {
-        navigationItem.title = Strings.customShareExtension
-
-        let itemCancel = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(cancelAction))
-        navigationItem.setLeftBarButton(itemCancel, animated: false)
-
-        let itemDone = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(doneAction))
-        navigationItem.setRightBarButton(itemDone, animated: false)
-    }
 
     @objc func cancelAction () {
         let error = NSError(domain: Strings.bundleIdentifier, code: 0, userInfo: [NSLocalizedDescriptionKey: Strings.cancelError])
@@ -43,6 +32,18 @@ private extension CustomShareViewController {
 
     @objc func doneAction() {
         extensionContext?.completeRequest(returningItems: [], completionHandler: nil)
+    }
+
+    func authenticateToken() {
+        guard let token: String = UserDefaultManager.shared.get(for: .token) else {
+            let error = NSError(domain: Strings.bundleIdentifier, code: 0, userInfo: [NSLocalizedDescriptionKey: Strings.cancelError])
+            extensionContext?.cancelRequest(withError: error)
+            return // Throw error here
+        }
+
+        subscribeToViewModel()
+        loadExtensionItem()
+        setupNavBar()
     }
 
     func subscribeToViewModel() {
@@ -96,5 +97,15 @@ private extension CustomShareViewController {
         ])
         shareView.didMove(toParent: self)
         view.backgroundColor = .systemGray6
+    }
+    
+    func setupNavBar() {
+        navigationItem.title = Strings.customShareExtension
+
+        let itemCancel = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(cancelAction))
+        navigationItem.setLeftBarButton(itemCancel, animated: false)
+
+        let itemDone = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(doneAction))
+        navigationItem.setRightBarButton(itemDone, animated: false)
     }
 }

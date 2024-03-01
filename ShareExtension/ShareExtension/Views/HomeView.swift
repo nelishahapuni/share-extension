@@ -9,16 +9,18 @@ import SwiftUI
 
 struct HomeView: View {
     @State private var isImagePresented: Bool = false
-    @State private var images: [IdentifiableImage] = []
+    @ObservedObject private var viewModel: HomeViewModel
 
     private var columns: [GridItem] = []
     private let rowSpacing: CGFloat
 
     public init(
+        viewModel: HomeViewModel,
         columnSpacing: CGFloat = Numbers.columnSpacing,
         numberOfColumns: Int = Numbers.numberOfColumns,
         rowSpacing: CGFloat = Numbers.rowSpacing
     ) {
+        self.viewModel = viewModel
         columns.append(
             contentsOf: repeatElement(
                 GridItem(
@@ -33,32 +35,45 @@ struct HomeView: View {
 
     var body: some View {
         VStack {
-            LazyVGrid(
-                columns: columns,
-                spacing: rowSpacing
-            ) {
-                ForEach(images, id: \.self) { item in
-                    Button(
-                        action: { isImagePresented = true },
-                        label: {
-                            item.image
-                                .resizable()
-                                .aspectRatio(1, contentMode: .fill)
-                        }
-                    )
-                    .navigationDestination(
-                        isPresented: $isImagePresented) {
-                            ImageView(image: item.image)
-                        }
-                }
-            }
+            imageGrid
             Spacer()
-            PhotoPickerView(images: $images)
+            PhotoPickerView(images: $viewModel.images)
                 .navigationBarBackButtonHidden()
         }
+        .padding(.horizontal)
+    }
+}
+
+// MARK: - Private Views
+
+private extension HomeView {
+
+    var imageGrid: some View {
+        LazyVGrid(
+            columns: columns,
+            spacing: rowSpacing
+        ) {
+            ForEach(viewModel.images, id: \.self) { item in
+                Button(
+                    action: {
+                        isImagePresented = true
+                    },
+                    label: {
+                        item.image
+                            .resizable()
+                            .aspectRatio(1, contentMode: .fill)
+                    }
+                )
+                .navigationDestination(
+                    isPresented: $isImagePresented) {
+                        ImageView(image: item.image)
+                    }
+            }
+        }
+        .padding(.top)
     }
 }
 
 #Preview {
-    HomeView()
+    HomeView(viewModel: HomeViewModel())
 }

@@ -6,9 +6,9 @@
 //
 
 enum UserDefaultsKey: String, CaseIterable {
+    case username
     case token
-    case isLoggedIn
-    
+
     var value: String {
         return self.rawValue
     }

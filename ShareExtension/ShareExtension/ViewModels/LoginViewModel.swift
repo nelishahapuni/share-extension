@@ -12,8 +12,6 @@ class LoginViewModel: ObservableObject {
     @Published var username: String
     @Published var password: String
 
-    private let token = UUID()
-
     public init(
         loginRequest: LoginModel
     ) {
@@ -31,7 +29,11 @@ extension LoginViewModel {
     func validate(completion: @escaping (Bool) -> Void) {
         if !username.isEmpty,
            !password.isEmpty {
-            setUID(token.uuidString)
+            let token: String? = UserDefaultManager.shared.get(for: .token)
+
+            if token == nil {
+                setUserDefaults(username, UUID().uuidString)
+            }
             completion(true)
         }
     }
@@ -40,8 +42,8 @@ extension LoginViewModel {
 // MARK: - Private Method
 
 private extension LoginViewModel {
-    func setUID(_ token: String) {
+    func setUserDefaults(_ username: String, _ token: String) {
+        UserDefaultManager.shared.set(username, for: .username)
         UserDefaultManager.shared.set(token, for: .token)
-        UserDefaultManager.shared.set(true, for: .isLoggedIn)
     }
 }

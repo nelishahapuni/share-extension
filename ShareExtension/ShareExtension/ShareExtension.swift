@@ -10,7 +10,11 @@ import SwiftUI
 struct ShareExtension: View {
 
     var body: some View {
-        LoginView(viewModel: LoginViewModel(loginRequest: LoginModel.previewData))
+        if let token: String = UserDefaultManager.shared.get(for: .token) {
+            HomeView(viewModel: HomeViewModel())
+        } else {
+            LoginView(viewModel: LoginViewModel(loginRequest: LoginModel.previewData))
+        }
     }
 }
 
